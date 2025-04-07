@@ -77,63 +77,31 @@ var heroSwiper = new Swiper(".heroSwiper", {
   },
 });
 
-var heroSwiper = new Swiper(".heroSwiper", {
-  direction: "horizontal",
-  loop: true,
-  autoplay: {
-      delay: 6000,
-      disableOnInteraction: false,
-  },
-  effect: "creative",
-  creativeEffect: {
-      prev: {
-          translate: ["-120%", 0, -500],
-          opacity: 0,
-      },
-      next: {
-          translate: ["120%", 0, -500],
-          opacity: 0,
-      },
-  },
-  speed: 1000,
-  pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-          return '<span class="' + className + '">0' + (index + 1) + '</span>';
-      },
-  },
-  navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-  },
-});
-
 
 // Initialize Courses Swiper course section
 const coursesSwiper = new Swiper('.courses-slider', {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  pagination: {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
       el: '.swiper-pagination-courses',
       clickable: true,
-  },
-  navigation: {
+    },
+    navigation: {
       nextEl: '.swiper-button-next-courses',
       prevEl: '.swiper-button-prev-courses',
-  },
-  breakpoints: {
+    },
+    breakpoints: {
       640: {
-          slidesPerView: 2,
+        slidesPerView: 2,
       },
       992: {
-          slidesPerView: 3,
+        slidesPerView: 3,
       },
       1200: {
-          slidesPerView: 4,
+        slidesPerView: 4,
       }
-  }
-});
+    }
+  });
 
 // Mobile menu toggle
 function toggleMenu() {
