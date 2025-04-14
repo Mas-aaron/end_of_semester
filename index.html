@@ -19,6 +19,14 @@
      <link rel="shortcut icon" href="images/francis-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
+<!-- Add to index.html before </body> -->
+<div class="preloader">
+    <div class="loader">
+      <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
+    </div>
+  </div>
 <body>
     <!-- Header -->
     <header class="header">
@@ -214,7 +222,29 @@
             </div>
         </div>
     </section>
-
+    <section class="recommendation-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Recommended For You</h2>
+            <div class="recommendation-controls">
+              <button id="refreshRecs" class="btn-refresh">
+                <i class="fas fa-sync-alt"></i> Refresh Recommendations
+              </button>
+            </div>
+          </div>
+          <div class="recommendation-carousel swiper">
+            <div class="swiper-wrapper" id="recommendationContainer">
+              <!-- Loading state initially -->
+              <div class="swiper-slide" style="text-align: center; padding: 2rem;">
+                <i class="fas fa-spinner fa-spin"></i> Loading recommendations...
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
     <!-- Courses Section -->
     <section class="courses-section">
         <div class="container">
