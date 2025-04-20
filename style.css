@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     height: 80px;
     padding: 0 1rem;
-    margin-left: -30px;
+    margin-left: 0px;
 }
 
 .logo {
@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-left: -30px;
+    margin-left: 100px;
 }
 
 .logo-icon {
@@ -142,8 +142,28 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    margin-left: 30px;    
+}
+.courses{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.course-dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    display: none;
+    z-index: 1000;
+    width: 150px;
+    border-radius: 0 0 0 0;
 }
 
+.show {display:block;}
 .nav-links {
     display: flex;
     gap: 1.5rem;
@@ -337,6 +357,10 @@ h1, h2, h3, h4, h5, h6 {
     .header.search-active .nav-links {
         display: none !important;
     }
+    .swiper-button-prev,
+    .swiper-button-next{
+        display: none;
+    }
 }
 /* Hero Slider Navigation Arrows */
 .hero-slider .swiper-button-prev,
@@ -349,7 +373,9 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition);
     margin-top: -18px; /* Half of height to center vertically */
 }
-
+.hero{
+    margin-top: 0px; /* Adjust for fixed header */
+}
 .hero-slider .swiper-button-prev:hover,
 .hero-slider .swiper-button-next:hover {
     background: rgba(255, 255, 255, 0.3);
@@ -1232,7 +1258,7 @@ h1, h2, h3, h4, h5, h6 {
     .logo {
         font-size: 1.5rem; /* Smaller logo text */
         margin-left: -25px;
-        margin-right: -10px;
+        margin-right: 10px;
     }
 
     .logo-icon {
@@ -1818,8 +1844,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Hero Slider Styles */
 .hero-slider {
-width: 100%;
-height: 100%;
+    margin-top: -120px;
+    width: 100%;
+    height: 100%;
 }
 
 .hero-slider .swiper-slide {
@@ -2335,12 +2362,9 @@ background: white;
     
     .logo {
         font-size: 1.5rem;
+        margin-left: 10px;
     }
 }
-
-
-
-<style>
         
 .courses-hero {
     padding: 180px 0 80px;

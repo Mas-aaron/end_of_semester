@@ -4,7 +4,23 @@ function toggleMenu() {
     const navLinks = document.getElementById("navLinks");
     navLinks.classList.toggle("active");
 }
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 // Theme Toggle
 const themeToggle = document.getElementById("themeToggle");
 const themeIcon = themeToggle.querySelector("i");
@@ -609,3 +625,86 @@ document.addEventListener('DOMContentLoaded', function() {
     const event = new Event('DOMContentLoaded');
     document.dispatchEvent(event);
   };
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.querySelector('.modern-form');
+        const successModal = document.getElementById('successModal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const inquiry = document.getElementById('inquiry');
+                const inquiryText = inquiry.options[inquiry.selectedIndex].text;
+                const message = document.getElementById('message').value;
+                
+                // Display submitted information in modal
+                document.getElementById('submittedName').textContent = name;
+                document.getElementById('submittedEmail').textContent = email;
+                document.getElementById('submittedSubject').textContent = subject;
+                document.getElementById('submittedInquiry').textContent = inquiryText;
+                document.getElementById('submittedMessage').textContent = message;
+                
+                // Show success modal
+                successModal.classList.add('active');
+                
+                // Reset form
+                contactForm.reset();
+            });
+        }
+        
+        // Close modal functions
+        function closeModal() {
+            successModal.classList.remove('active');
+        }
+        
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', closeModal);
+        }
+        
+        if (modalCloseBtn) {
+            modalCloseBtn.addEventListener('click', closeModal);
+        }
+        
+        // Close modal when clicking outside
+        successModal.addEventListener('click', function(e) {
+            if (e.target === successModal) {
+                closeModal();
+            }
+        });
+    });
+// Course Category Filtering
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const courseCards = document.querySelectorAll('.course-card');
+  
+  filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          
+          // Add active class to clicked button
+          button.classList.add('active');
+          
+          const category = button.dataset.category;
+          
+          // Filter courses
+          courseCards.forEach(card => {
+              if (category === 'all' || card.dataset.category === category) {
+                  card.style.display = 'block';
+              } else {
+                  card.style.display = 'none';
+              }
+          });
+      });
+  });
+});

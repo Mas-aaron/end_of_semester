@@ -28,9 +28,19 @@
                 <nav class="navbar">
                     <div class="nav-links" id="navLinks">
                         <a href="index.html" class="nav-item">Home</a>
-                        <a href="category.html" class="nav-item active">Courses</a>
-                        <a href="kids.html" class="nav-item">Kids</a>
+                        <div class="courses">
+                            <div onclick="myFunction()"  class="nav-item">Category</div>
+                            <div id="myDropdown" class="course-dropdown">
+                                <div class="a">
+                                    <a href="category.html" class="nav-item">Courses</a>
+                                </div>
+                                <div class="a">
+                                    <a href="kids.html" class="nav-item">Kids</a>
+                                </div>
+                            </div>
+                        </div>
                         <a href="blog.html" class="nav-item">Blog</a>
+                        <a href="about.html" class="nav-item">About</a>
                         <a href="contactus.html" class="nav-item">Contact</a>
                         <a href="login.html" class="nav-item">Login</a>
                     </div>
@@ -64,148 +74,281 @@
     </section>
 
     <!-- Course Categories -->
-    <section class="course-categories">
-        <div class="container">
-            <div class="category-filter">
-                <button class="filter-btn active">All</button>
-                <button class="filter-btn">Technology</button>
-                <button class="filter-btn">Business</button>
-                <button class="filter-btn">Design</button>
-                <button class="filter-btn">Marketing</button>
-                <button class="filter-btn">Personal Development</button>
+   <!-- Update the course-categories section in category.html -->
+<section class="course-categories">
+    <div class="container">
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="technology">Technology</button>
+            <button class="filter-btn" data-category="business">Business</button>
+            <button class="filter-btn" data-category="design">Design</button>
+            <button class="filter-btn" data-category="marketing">Marketing</button>
+            <button class="filter-btn" data-category="development">Personal Development</button>
+            <button class="filter-btn" data-category="language">Language</button>
+        </div>
+        
+        <div class="courses-grid">
+            <!-- Course 1 -->
+            <div class="course-card" data-category="technology">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Python Programming">
+                    <span class="category-badge">Technology</span>
+                </div>
+                <div class="course-info">
+                    <h3>Python for Beginners</h3>
+                    <div class="instructor">By Maria Chen</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="review-count">(256 reviews)</span>
+                    </div>
+                    <div class="price">$59.99</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
             </div>
             
-            <div class="courses-grid">
-                <!-- Course 1 -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Digital Marketing">
-                        <span class="category-badge">Marketing</span>
-                    </div>
-                    <div class="course-info">
-                        <h3>Digital Marketing Fundamentals</h3>
-                        <div class="instructor">By John Smith</div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span class="review-count">(124 reviews)</span>
-                        </div>
-                        <div class="price">$49.99</div>
-                        <button class="enroll-btn">Enroll Now</button>
-                    </div>
+            <!-- Course 2 -->
+            <div class="course-card" data-category="technology">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Data Science">
+                    <span class="category-badge">Technology</span>
                 </div>
-                
-                <!-- Course 2 -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Python Programming">
-                        <span class="category-badge">Technology</span>
+                <div class="course-info">
+                    <h3>Data Science Fundamentals</h3>
+                    <div class="instructor">By David Wilson</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span class="review-count">(87 reviews)</span>
                     </div>
-                    <div class="course-info">
-                        <h3>Python for Beginners</h3>
-                        <div class="instructor">By Maria Chen</div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span class="review-count">(256 reviews)</span>
-                        </div>
-                        <div class="price">$59.99</div>
-                        <button class="enroll-btn">Enroll Now</button>
-                    </div>
+                    <div class="price">$79.99</div>
+                    <button class="enroll-btn">Enroll Now</button>
                 </div>
-                
-                <!-- Course 3 -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Data Science">
-                        <span class="category-badge">Technology</span>
-                    </div>
-                    <div class="course-info">
-                        <h3>Data Science Fundamentals</h3>
-                        <div class="instructor">By David Wilson</div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <span class="review-count">(87 reviews)</span>
-                        </div>
-                        <div class="price">$79.99</div>
-                        <button class="enroll-btn">Enroll Now</button>
-                    </div>
+            </div>
+            
+            <!-- Course 3 -->
+            <div class="course-card" data-category="design">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="UI/UX Design">
+                    <span class="category-badge">Design</span>
                 </div>
-                
-                <!-- Course 4 -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="UI/UX Design">
-                        <span class="category-badge">Design</span>
+                <div class="course-info">
+                    <h3>UI/UX Design Masterclass</h3>
+                    <div class="instructor">By Sarah Johnson</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="review-count">(312 reviews)</span>
                     </div>
-                    <div class="course-info">
-                        <h3>UI/UX Design Masterclass</h3>
-                        <div class="instructor">By Sarah Johnson</div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span class="review-count">(312 reviews)</span>
-                        </div>
-                        <div class="price">$69.99</div>
-                        <button class="enroll-btn">Enroll Now</button>
-                    </div>
+                    <div class="price">$69.99</div>
+                    <button class="enroll-btn">Enroll Now</button>
                 </div>
-                
-                <!-- Course 5 -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80" alt="Financial Planning">
-                        <span class="category-badge">Business</span>
-                    </div>
-                    <div class="course-info">
-                        <h3>Financial Planning Essentials</h3>
-                        <div class="instructor">By Robert Brown</div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span class="review-count">(143 reviews)</span>
-                        </div>
-                        <div class="price">$54.99</div>
-                        <button class="enroll-btn">Enroll Now</button>
-                    </div>
+            </div>
+            
+            <!-- Course 4 -->
+            <div class="course-card" data-category="business">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80" alt="Financial Planning">
+                    <span class="category-badge">Business</span>
                 </div>
-                
-                <!-- Course 6 -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Leadership">
-                        <span class="category-badge">Personal Development</span>
+                <div class="course-info">
+                    <h3>Financial Planning Essentials</h3>
+                    <div class="instructor">By Robert Brown</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="review-count">(143 reviews)</span>
                     </div>
-                    <div class="course-info">
-                        <h3>Leadership & Management</h3>
-                        <div class="instructor">By Emily Wilson</div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <span class="review-count">(98 reviews)</span>
-                        </div>
-                        <div class="price">$49.99</div>
-                        <button class="enroll-btn">Enroll Now</button>
+                    <div class="price">$54.99</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+            
+            <!-- Course 5 -->
+            <div class="course-card" data-category="development">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Leadership">
+                    <span class="category-badge">Personal Development</span>
+                </div>
+                <div class="course-info">
+                    <h3>Leadership & Management</h3>
+                    <div class="instructor">By Emily Wilson</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span class="review-count">(98 reviews)</span>
                     </div>
+                    <div class="price">$49.99</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+            
+            <!-- Course 6 -->
+            <div class="course-card" data-category="marketing">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Digital Marketing">
+                    <span class="category-badge">Marketing</span>
+                </div>
+                <div class="course-info">
+                    <h3>Digital Marketing Fundamentals</h3>
+                    <div class="instructor">By John Smith</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="review-count">(124 reviews)</span>
+                    </div>
+                    <div class="price">$49.99</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+            
+            <!-- Course 7 -->
+            <div class="course-card" data-category="technology">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="JavaScript">
+                    <span class="category-badge">Technology</span>
+                </div>
+                <div class="course-info">
+                    <h3>JavaScript Mastery</h3>
+                    <div class="instructor">By Alex Johnson</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="review-count">(342 reviews)</span>
+                    </div>
+                    <div class="price">$64.99</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+            
+            <!-- Course 8 -->
+            <div class="course-card" data-category="business">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1511&q=80" alt="Entrepreneurship">
+                    <span class="category-badge">Business</span>
+                </div>
+                <div class="course-info">
+                    <h3>Entrepreneurship 101</h3>
+                    <div class="instructor">By Michael Rodriguez</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span class="review-count">(112 reviews)</span>
+                    </div>
+                    <div class="price">$59.99</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+            
+            <!-- Course 9 -->
+            <div class="course-card" data-category="language">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" alt="Spanish">
+                    <span class="category-badge">Language</span>
+                </div>
+                <div class="course-info">
+                    <h3>Spanish for Beginners</h3>
+                    <div class="instructor">By Sofia Martinez</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="review-count">(178 reviews)</span>
+                    </div>
+                    <div class="price">$44.99</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+            
+            <!-- Course 10 -->
+            <div class="course-card" data-category="design">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1588&q=80" alt="Graphic Design">
+                    <span class="category-badge">Design</span>
+                </div>
+                <div class="course-info">
+                    <h3>Graphic Design Principles</h3>
+                    <div class="instructor">By David Kim</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="review-count">(267 reviews)</span>
+                    </div>
+                    <div class="price">$54.99</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+            
+            <!-- Course 11 -->
+            <div class="course-card" data-category="technology">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Web Development">
+                    <span class="category-badge">Technology</span>
+                </div>
+                <div class="course-info">
+                    <h3>Complete Web Development</h3>
+                    <div class="instructor">By Sarah Williams</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="review-count">(412 reviews)</span>
+                    </div>
+                    <div class="price">$89.99</div>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+            
+            <!-- Course 12 -->
+            <div class="course-card" data-category="development">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Public Speaking">
+                    <span class="category-badge">Personal Development</span>
+                </div>
+                <div class="course-info">
+                    <h3>Public Speaking Mastery</h3>
+                    <div class="instructor">By James Peterson</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="review-count">(156 reviews)</span>
+                    </div>
+                    <div class="price">$49.99</div>
+                    <button class="enroll-btn">Enroll Now</button>
                 </div>
             </div>
         </div>
