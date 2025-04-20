@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     height: 80px;
     padding: 0 1rem;
-    margin-left: 0px;
+    margin-left: -20px;
 }
 
 .logo {
@@ -130,7 +130,6 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-left: 100px;
 }
 
 .logo-icon {
@@ -223,6 +222,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #5f6368;
     font-size: 1rem;
     transition: all 0.3s ease;
+    margin-left: 0px;
 }
 
 .search-input {
