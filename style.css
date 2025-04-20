@@ -1293,7 +1293,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .theme-toggle {
         font-size: 1.1rem;
-        margin-left: -20px;
+        margin-left: -30px;
         margin-right: -20px;
     }
 
@@ -1780,6 +1780,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .mobile-menu {
         display: block;
+        margin-left: -30px;
     }
     
     .search-container {
@@ -2357,12 +2358,12 @@ background: white;
     }
     
     .header-content {
-        height: 70px;
+        height: 70px;        
     }
     
     .logo {
         font-size: 1.5rem;
-        margin-left: 10px;
+        margin-left: -10px;
     }
 }
         
