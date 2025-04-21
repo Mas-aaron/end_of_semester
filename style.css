@@ -263,7 +263,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
     .header-content {
         flex-wrap: nowrap; /* Prevent wrapping */
-        overflow: hidden; /* Hide overflow if needed */
+        /* overflow: hidden; */
     }
     
     .logo {
@@ -1653,6 +1653,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 768px) and (max-width: 1024px) {
     .container {
         padding: 0 1rem;
+
     }
 
     h1, h2 {
@@ -1842,7 +1843,11 @@ h1, h2, h3, h4, h5, h6 {
     .btn-wishlist {
         width: 100%;
     }
-   
+    .container{
+        margin-right: 0;
+        padding-right: 0;
+    }
+}
 /* Hero Slider Styles */
 .hero-slider {
     margin-top: -120px;
@@ -2358,17 +2363,38 @@ background: white;
     }
     
     .header-content {
-        height: 70px;
-        margin-right: -15px;        
+        height: 70px; 
+          
     }
     
     .logo {
         font-size: 1.5rem;
+        margin-right: 0;
         margin-left: -10px;
     }
-    .fa-bars{
-        width: 35px;
+    .mobile-menu{
+        margin-left: -20px;
+        
     }
+    .search-container{
+        margin-left: -50px;
+        margin-top: 0x;
+        padding-left: 0;
+        display: none;
+    }
+    .theme-toggle{
+        /* margin-left: -20px; */
+        margin-left: -10px;
+    }
+    .fa-search{
+        /* margin-left: -20px; */
+        z-index: 1000;
+    }
+    .search-button{
+
+        margin-left: -100px;
+    }
+    
 }
         
 .courses-hero {
