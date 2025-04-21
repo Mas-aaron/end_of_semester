@@ -1851,6 +1851,91 @@ h1, h2, h3, h4, h5, h6 {
         padding-right: 0;
     }
 }
+/* Prevent horizontal scrolling on mobile */
+@media (max-width: 480px) {
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+    
+    .container {
+      padding: 0 15px;
+    }
+    
+    .header-content {
+      padding: 0 15px;
+    }
+    
+    .navbar {
+      margin-left: 0;
+      padding-right: 0;
+    }
+    
+    .search-container {
+      margin-left: 0;
+      width: auto;
+    }
+    
+    .hero-slider .swiper-slide {
+      padding: 140px 15px 80px;
+    }
+    
+    .hero-content {
+      padding: 0 15px;
+    }
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    transition: var(--transition);
+    /* Add these to ensure proper fixed positioning */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Add margin to body to account for fixed header */
+body {
+    padding-top: 80px; /* Match your header height */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px; /* Adjust for smaller header if needed */
+    }
+}
+/* Ensure all elements stay within viewport */
+* {
+    max-width: 100%;
+}
+
+/* Fix for mobile menu causing overflow */
+@media (max-width: 768px) {
+    .nav-links {
+        width: 100%;
+        left: -100%;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+}
+
+/* Prevent images from causing overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix for swiper causing overflow */
+.swiper {
+    overflow: hidden;
+}
 /* Hero Slider Styles */
 .hero-slider {
     margin-top: -120px;
@@ -2375,13 +2460,14 @@ background: white;
     
     .header-content {
         height: 70px; 
-          
+        width: 100%;
+        margin-right: 0;
     }
     
     .logo {
         font-size: 1.5rem;
         margin-right: 0;
-        margin-left: -10px;
+        margin-left: 0;
     }
     .mobile-menu{
         /* margin-left: -20px; */
@@ -2404,7 +2490,7 @@ background: white;
     .navbar{
         padding-right:30px;
         margin-right: 30px;
-        margin-left: -70px;
+        margin-left: -80px;
     }
     .header {
         position: fixed;
