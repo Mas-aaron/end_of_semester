@@ -142,6 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 1.5rem;
     margin-left: 30px;    
 }
@@ -2330,6 +2331,14 @@ background: white;
     .search-container {
         width: 100%;
         margin-top: 1rem;
+        background-color: red;
+    }
+    .logo{
+        background-color: red;
+    }
+    .navbar{
+        background-color: red;
+        /* margin-right: 50px; */
     }
     
     .courses-hero {
@@ -2375,17 +2384,17 @@ background: white;
         margin-left: -10px;
     }
     .mobile-menu{
-        margin-left: -20px;
+        /* margin-left: -20px; */
         
     }
     .search-container{
-        margin-left: -50px;
+        /* margin-left: -100px; */
         margin-top: 0x;
         padding-left: 0;
     }
     .theme-toggle{
-        /* margin-left: -20px; */
         margin-left: -10px;
+        /* margin-left: -10px; */
     }
     .fa-search{
         /* margin-left: -20px; */
@@ -2393,7 +2402,14 @@ background: white;
     }
     .search-button{
 
-        margin-left: -100px;
+        /* margin-left: -100px; */
+    }
+    .navbar{
+        margin-right:60px;
+        margin-left: 0;
+    }
+    .header{
+        margin:0 auto;
     }
     
 }
