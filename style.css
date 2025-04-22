@@ -158,11 +158,13 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--bg-primary);
     box-shadow: var(--shadow);
     border-radius: var(--radius-lg);
-    padding: 1rem;
+    padding:2px;
     display: none;
     z-index: 1000;
     width: 150px;
     border-radius: 0 0 0 0;
+    width: 800px;
+    height: 60px;
 }
 
 .show {display:block;}
