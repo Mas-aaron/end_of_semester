@@ -2402,6 +2402,9 @@ body {
     .newsletter-form {
         flex-direction: column;
     }
+    .hero-wave{
+        margin-top: rem;
+    }
 }
 
 

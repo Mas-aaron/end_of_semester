@@ -38,8 +38,7 @@ Francis Academy is an educational website that gives unique and comprehensive ed
    ```bash
    git clone https://github.com/Mas-aaron/end_of_semester.git
 
-
-🤝 Contributing
+## Contributing
 Want to contribute? Follow these steps:
     1 -Fork the repository
     2 -Create a new branch (git checkout -b feature/new-feature)
@@ -47,10 +46,10 @@ Want to contribute? Follow these steps:
     4 -Push to the branch (git push origin feature/new-feature)
     5 -Open a Pull Request
 
-📜 License
+## License
 This project is licensed under the MIT License.
 
-📩 Contact
+## Contact
     -GitHub: @Mas-aaron
     -Email: masendiaaron6@gmail.com
 
